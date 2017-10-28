@@ -46,7 +46,6 @@ module.exports = function(grunt) {
             cwd: 'src',
             src: [
               'fonts/**/*.{woff,woff2}',
-              'img/**/*.{jpg,png,svg}',
               '*.html'
             ],
             dest: 'build'
@@ -57,6 +56,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
+            cwd: 'src',
             src: ['*.html'],
             dest: 'build'
           }
@@ -85,12 +85,23 @@ module.exports = function(grunt) {
     imagemin: {
       images: {
         options: {
-          optimizationLevel: 3
+          use: [
+            require('imagemin-optipng')(),
+            require('imagemin-svgo')({plugins: [
+              {removeTitle: true}
+            ]}),
+            require('imagemin-jpegoptim')({
+              max: 80,
+              progressive: true
+            })
+          ]
         },
         files: [
           {
             expand: true,
-            src: ['build/img/**/*.{jpg,png}']
+            cwd: 'src/img',
+            src: ['**/*.{jpg,png,svg}'],
+            dest: 'build/img'
           }
         ]
       }
@@ -112,15 +123,6 @@ module.exports = function(grunt) {
           ]
         },
         src: 'build/css/*.css'
-      }
-    },
-
-    svgmin: {
-      default: {
-        files: [{
-          expand: true,
-          src: 'build/img/**/*.svg',
-        }]
       }
     },
 
@@ -164,6 +166,5 @@ module.exports = function(grunt) {
 
   // Default tasks.
   grunt.registerTask('serve', ['browserSync', 'watch']);
-  grunt.registerTask('symbols', ['svgmin', 'svgstore']);
-  grunt.registerTask('build', ['clean:build', 'copy:build', 'less', 'postcss', 'csso', 'concat', 'uglify', 'symbols', 'clean:icons', 'imagemin']);
+  grunt.registerTask('build', ['clean:build', 'copy:build', 'less', 'postcss', 'csso', 'concat', 'uglify', 'imagemin', 'svgstore', 'clean:icons']);
 };
