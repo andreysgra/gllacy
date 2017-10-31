@@ -1,0 +1,36 @@
+.field-text {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  color: @font-color-input;
+}
+
+.field-text__name {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.field-text__input {
+  padding: 9px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font: inherit;
+  color: inherit;
+  border: 1px solid @border-color-input;
+
+  &:focus {
+    outline-color: @outline-color-input;
+  }
+}
+
+.field-text__input:focus + .field-text__name {
+  top: -10px;
+  font-size: 12px;
+  line-height: 13px;
+  color: @font-color-label--focus;
+}

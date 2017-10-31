@@ -1,0 +1,65 @@
+.list-reset(@padding-left: 0) {
+  margin: 0;
+  padding-left: @padding-left;
+  list-style: none;
+}
+
+// Photoshop Drop Shadow
+
+.ps-drop-shadow(@color: #000000; @opacity: 0; @angel: 0; @distance: 0; @spread: 0; @size: 0; @inner: false) {
+  @radian: (180 - @angel) * (pi() / 180);                  // перевод градусов в радианы
+
+  @offset-x: unit(round(cos(@radian) * @distance), px);    // сдвиг по оси X
+  @offset-y: unit(round(sin(@radian) * @distance), px);    // сдвиг по оси Y
+  @blur-radius: unit(@size - @size * @spread / @size, px); // размытие
+
+  .getInset() when (@inner = true) {
+    @inset: ~"inset";
+  }
+
+  .getInset() when (default()) {
+    @inset: ~"";
+  }
+
+  .getInset();
+
+  box-shadow: @offset-x @offset-y @blur-radius unit(@spread, px) fade(@color, @opacity) @inset;
+}
+
+// Photoshop Inner Shadow
+
+.ps-inner-shadow(@color: #000000; @opacity: 0; @angel: 0; @distance: 0; @spread: 0; @size: 0) {
+  .ps-drop-shadow(@color; @opacity; @angel; @distance; @spread; @size; true);
+}
+
+// Photoshop Text Shadow
+
+.ps-text-shadow(@color: #000000; @opacity: 0; @angel: 0; @distance: 0; @spread: 0; @size: 0) {
+  @radian: (180 - @angel) * (pi() / 180);                  // перевод градусов в радианы
+
+  @offset-x: unit(round(cos(@radian) * @distance), px);    // сдвиг по оси X
+  @offset-y: unit(round(sin(@radian) * @distance), px);    // сдвиг по оси Y
+  @blur-radius: unit(@size - @size * @spread / @size, px); // размытие
+
+  text-shadow: @offset-x @offset-y @blur-radius fade(@color, @opacity);
+}
+
+// Photoshop Gradient Overlay
+
+.ps-gradient-overlay(@angle-ps; @color-stop) {
+  .getAngle() when (@angle-ps > -180) and (@angle-ps <= 90) {
+    @angle: unit(90 - @angle-ps, deg);
+  }
+
+  .getAngle() when (@angle-ps > 90) and (@angle-ps <= 180) {
+    @angle: unit(360 + (90 - @angle-ps), deg);
+  }
+
+  .getAngle() when (default()) {
+    @angle: unit(0, deg);
+  }
+
+  .getAngle();
+
+  background-image: ~"linear-gradient(@{angle}, @{color-stop})";
+}

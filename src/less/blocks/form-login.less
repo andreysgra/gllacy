@@ -1,0 +1,38 @@
+.form-login {
+  position: absolute;
+  z-index: 5;
+  display: none;
+  top: 35px;
+  right: 0;
+  padding: 20px 15px;
+  width: 247px;
+  font-size: 0;
+  border-radius: 5px;
+  background-color: @bg-color-dropdown;
+}
+
+.form-login__field-text {
+  margin-bottom: 20px;
+}
+
+.form-login__links {
+  width: 125px;
+  font-size: 13px;
+  line-height: 1.846;
+}
+
+.form-login__link {
+  color: @font-color-link;
+  border-bottom: 1px solid fade(@font-color-link, 30%);
+
+  &:hover {
+    color: @font-color-link--hover;
+    border-bottom: 1px solid fade(@font-color-link--hover, 30%);
+  }
+}
+
+.form-login__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

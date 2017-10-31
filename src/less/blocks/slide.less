@@ -1,0 +1,17 @@
+.slide__button {
+  padding: 10px 41px;
+  border-radius: 32px;
+  font-size: 32px;
+  line-height: 1.375;
+  .ps-gradient-overlay(90; #e74a35 0%, #f26843 100%);
+  .ps-drop-shadow(#ac1000; 100%; 90; 1; 0; 2);
+  .ps-text-shadow(#a0200b; 76%; 90; 2; 0; 5);
+
+  &:hover {
+    .ps-drop-shadow(#ac1000; 100%; 90; 2; 0; 2);
+  }
+
+  &:active {
+    .ps-gradient-overlay(90; #d74632 0%, #e1613e 100%);
+  }
+}
