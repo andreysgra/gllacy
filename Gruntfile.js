@@ -116,6 +116,23 @@ module.exports = function(grunt) {
       }
     },
 
+    lintspaces: {
+      default: {
+        src: [
+          'src/*.html',
+          '*.json',
+          '*.js',
+          '*.md',
+          'src/**/*.js',
+          'src/img/**/*.svg',
+          'src/less/**/*.less'
+        ],
+        options: {
+          editorconfig: '.editorconfig'
+        }
+      }
+    },
+
     postcss: {
       style: {
         options: {
