@@ -1,0 +1,21 @@
+.link {
+  color: @font-color-link;
+  border-bottom: 1px solid fade(@white, 30%);
+
+  &:hover,
+  &:active {
+    color: @font-color-link--hover;
+    border-bottom-color: fade(@border-color-link--hover, 30%);
+  }
+}
+
+.link--invert {
+  color: @font-color-link-invert;
+  border-bottom-color: fade(@black, 30%);
+
+  &:hover,
+  &:active {
+    color: @font-color-link-invert--hover;
+    border-bottom-color: fade(@border-color-link-invert--hover, 30%);
+  }
+}

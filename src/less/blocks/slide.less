@@ -1,3 +1,12 @@
+.slide {
+  display: none;
+  text-align: center;
+
+  &--current {
+    display: block;
+  }
+}
+
 .slide__button {
   padding: 10px 41px;
   border-radius: 32px;
@@ -14,4 +23,11 @@
   &:active {
     .ps-gradient-overlay(90; #d74632 0%, #e1613e 100%);
   }
+}
+
+.slide__title {
+  margin: 0 auto 32px;
+  max-width: 680px;
+  font-size: 60px;
+  line-height: 1;
 }

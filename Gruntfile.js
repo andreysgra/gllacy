@@ -52,7 +52,7 @@ module.exports = function(grunt) {
           }
         ]
       },
-      dev: {
+      html: {
         files: [
           {
             expand: true,
@@ -67,7 +67,8 @@ module.exports = function(grunt) {
     csso: {
       compress: {
         options: {
-          comments: false
+          comments: false,
+          report: true
         },
         files: {
           'build/css/style.min.css': ['build/css/style.css']
@@ -148,7 +149,7 @@ module.exports = function(grunt) {
     watch: {
       html: {
         files: ['src/*.html'],
-        tasks: ['copy:dev']
+        tasks: ['copy:html']
       },
       js: {
         files: ['src/js/*.js'],

@@ -5,7 +5,6 @@
 }
 
 // Photoshop Drop Shadow
-
 .ps-drop-shadow(@color: #000000; @opacity: 0; @angel: 0; @distance: 0; @spread: 0; @size: 0; @inner: false) {
   @radian: (180 - @angel) * (pi() / 180);                  // перевод градусов в радианы
 
@@ -27,13 +26,11 @@
 }
 
 // Photoshop Inner Shadow
-
 .ps-inner-shadow(@color: #000000; @opacity: 0; @angel: 0; @distance: 0; @spread: 0; @size: 0) {
   .ps-drop-shadow(@color; @opacity; @angel; @distance; @spread; @size; true);
 }
 
 // Photoshop Text Shadow
-
 .ps-text-shadow(@color: #000000; @opacity: 0; @angel: 0; @distance: 0; @spread: 0; @size: 0) {
   @radian: (180 - @angel) * (pi() / 180);                  // перевод градусов в радианы
 
@@ -45,7 +42,6 @@
 }
 
 // Photoshop Gradient Overlay
-
 .ps-gradient-overlay(@angle-ps; @color-stop) {
   .getAngle() when (@angle-ps > -180) and (@angle-ps <= 90) {
     @angle: unit(90 - @angle-ps, deg);
