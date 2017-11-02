@@ -21,6 +21,5 @@
     "selector-type-no-unknown": true,
     "media-feature-name-no-vendor-prefix": true,
     "no-duplicate-selectors": true,
-    "declaration-block-no-redundant-longhand-properties": true
   }
 }

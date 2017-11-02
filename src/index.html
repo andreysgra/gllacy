@@ -258,56 +258,44 @@
           </article>
         </section>
 
-        <section class="features">
+        <section class="features page-main__features">
           <h2 class="visually-hidden">Особенности нашего магазина</h2>
 
-          <p class="features__title">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
+          <p class="features__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
 
           <ul class="features__list">
-            <li class="features__item">
-              <svg class="features__image" width="49" height="49">
-                <use xlink:href="img/symbols.svg#icon-ice-cream"></use>
-              </svg>
+            <li class="features__item features__item--icon-ice-cream">
               Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
             </li>
-            <li class="features__item">
-              <svg class="features__image" width="49" height="49">
-                <use xlink:href="img/symbols.svg#icon-cow"></use>
-              </svg>
+            <li class="features__item features__item--icon-cow">
               Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
             </li>
-            <li class="features__item">
-              <svg class="features__image" width="49" height="49">
-                <use xlink:href="img/symbols.svg#icon-eco"></use>
-              </svg>
+            <li class="features__item features__item--icon-eco">
               Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
             </li>
-            <li class="features__item">
-              <svg class="features__image" width="49" height="49">
-                <use xlink:href="img/symbols.svg#icon-thermometer"></use>
-              </svg>
+            <li class="features__item features__item--icon-thermometer">
               Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
             </li>
           </ul>
         </section>
 
-        <div class="news">
-          <article class="blog-article">
+        <div class="news page-main__news">
+          <article class="blog-article news__item">
             <h2 class="blog-article__title">Новое в нашем блоге</h2>
 
             <a href="#" class="blog-article__link">10 способов сервировки фруктовых щербетов к столу</a>
           </article>
 
-          <article class="subscribe">
+          <article class="subscribe news__item">
             <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
-            <form class="form-subscribe" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="field-text">
-                <span class="field-text__name">Электронная почта</span>
+            <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="field-text subscribe__field-text">
                 <input class="field-text__input" type="email" name="subscribe-email" required>
+                <span class="field-text__name">Электронная почта</span>
               </label>
 
-              <button class="button" type="submit">Отправить</button>
+              <button class="button subscribe__button" type="submit">Отправить</button>
             </form>
           </article>
         </div>
@@ -318,10 +306,11 @@
     <section class="map">
       <h2 class="visually-hidden">Как к нам добраться</h2>
 
+      <img class="map__image" src="img/bg-map.png" width="1200" height="640" alt="Месторасположение главного офиса и магазина">
       <div class="map__interactive" id="map"></div>
 
       <div class="content-wrapper">
-        <div class="contacts">
+        <div class="contacts map__contacts">
           <p class="contacts__text">
             Адрес главного офиса<br>и офлайн магазина:
             <b class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
@@ -332,7 +321,7 @@
             <b class="contacts__phone">8 812 450-25-25</b>(с 10 до 20 ежедневно)
           </p>
 
-          <button class="button" type="button">Форма обратной связи</button>
+          <button class="button contacts__button" type="button">Форма обратной связи</button>
         </div>
       </div>
     </section>
