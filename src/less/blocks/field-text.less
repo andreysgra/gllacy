@@ -13,6 +13,11 @@
   left: 16px;
   transform: translateY(-50%);
   cursor: text;
+
+  &--top {
+    top: 8px;
+    transform: none;
+  }
 }
 
 .field-text__input {
@@ -27,6 +32,11 @@
   &:focus {
     outline-color: @outline-color-input;
   }
+
+  &--textarea {
+    height: 155px;
+    resize: vertical;
+  }
 }
 
 .field-text__input:focus + .field-text__name {
@@ -34,4 +44,8 @@
   font-size: 12px;
   line-height: 13px;
   color: @font-color-label--focus;
+
+  &--top {
+    top: -16px;
+  }
 }

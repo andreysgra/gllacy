@@ -1,0 +1,21 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  .list-reset();
+}
+
+.breadcrumbs__item {
+  position: relative;
+  margin-right: 8px;
+  padding-right: 13px;
+  font-size: 14px;
+  line-height: 16px;
+
+  &:not(:last-child)::after {
+    content: "»";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}

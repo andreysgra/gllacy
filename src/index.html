@@ -104,7 +104,7 @@
           </div>
         </div>
 
-        <div class="contact-number">
+        <div class="contact-number page-header__contact-number">
           <p class="contact-number__text">С 10 до 20, ежедневно</p>
           <a href="tel:88124502525" class="contact-number__link">8 812 450-25-25</a>
         </div>
@@ -302,7 +302,6 @@
       </main>
     </div>
 
-
     <section class="map">
       <h2 class="visually-hidden">Как к нам добраться</h2>
 
@@ -368,16 +367,16 @@
         <div class="page-footer__info">
           <ul class="info-links">
             <li class="info-links__item">
-              <a href="#" class="info-links__link info-links__link--important">Для поставщиков</a>
+              <a href="#" class="link info-links__link info-links__link--important">Для поставщиков</a>
             </li>
             <li class="info-links__item">
-              <a href="#" class="info-links__link">Наши документы</a>
+              <a href="#" class="link info-links__link">Наши документы</a>
             </li>
             <li class="info-links__item">
-              <a href="#" class="info-links__link">О производстве</a>
+              <a href="#" class="link info-links__link">О производстве</a>
             </li>
             <li class="info-links__item">
-              <a href="#" class="info-links__link">Экологические стандарты</a>
+              <a href="#" class="link info-links__link">Экологические стандарты</a>
             </li>
           </ul>
         </div>
@@ -389,7 +388,7 @@
             </svg>
           </a>
 
-          <p class="copyright__text">Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2017</p>
+          <p class="copyright__text">Сделано в <a href="https://htmlacademy.ru/" class="link">HTML Academy</a> &copy; 2017</p>
         </div>
       </footer>
     </div>
@@ -400,26 +399,26 @@
       <fieldset class="form-feedback__fieldset">
         <legend class="form-feedback__legend">Мы обязательно вам ответим!</legend>
 
-        <label class="field-text">
-          <span class="field-text__name">Как вас зовут?</span>
+        <label class="field-text form-feedback__field form-feedback__field--fixed-size">
           <input class="field-text__input" type="text" name="feedback-name" required>
+          <span class="field-text__name">Как вас зовут?</span>
         </label>
 
-        <label class="field-text">
-          <span class="field-text__name">Ваша почта для ответа?</span>
+        <label class="field-text form-feedback__field form-feedback__field--fixed-size">
           <input class="field-text__input" type="email" name="feedback-email" required>
+          <span class="field-text__name">Ваша почта для ответа?</span>
         </label>
 
-        <label class="field-text">
-          <span class="field-text__name">Напишите что-нибудь...</span>
-          <textarea class="field-text__input" name="feedback-message" rows="10"></textarea>
+        <label class="field-text form-feedback__field">
+          <textarea class="field-text__input field-text__input--textarea" name="feedback-message"></textarea>
+          <span class="field-text__name field-text__name--top">Напишите что-нибудь...</span>
         </label>
       </fieldset>
 
-      <button class="button" type="submit">Отправить</button>
+      <button class="button form-feedback__button" type="submit">Отправить</button>
     </form>
 
-    <button class="button-close" type="button">
+    <button class="button-close modal-feedback__button" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
   </div>

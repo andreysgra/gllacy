@@ -1,0 +1,34 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  .list-reset();
+}
+
+.social-links__item {
+  margin-right: 12px;
+}
+
+.social-links__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid fade(@white, 50%);
+
+  &:hover,
+  &:active {
+    border-color: fade(@white, 70%);
+  }
+}
+
+.social-links__image {
+  fill-opacity: 0.8;
+}
+
+.social-links__link:hover .social-links__image {
+  fill-opacity: 1;
+}
+
+.social-links__link:active .social-links__image {
+  fill: #e9e9e9;
+}
