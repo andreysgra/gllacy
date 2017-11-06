@@ -1,0 +1,50 @@
+.subscribe {
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+  padding: 17px 27px;
+  border-radius: 15px;
+  color: #5a5a5a;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-image: repeating-linear-gradient(135deg, @bg-color-dropdown, @bg-color-dropdown 7px, #92cdff 7px, #92cdff 14px, @bg-color-dropdown 14px, @bg-color-dropdown 21px, #fe9e90 21px, #fe9e90 28px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    border-radius: 9px;
+    background-color: @bg-color-dropdown;
+  }
+}
+
+.subscribe__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.subscribe__text {
+  margin-bottom: 37px;
+}
+
+.subscribe__field-text {
+  width: 72%;
+}
+
+.subscribe__button {
+  padding: 10px 18px;
+}

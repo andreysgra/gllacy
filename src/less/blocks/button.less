@@ -1,0 +1,27 @@
+.button {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 23px;
+  padding: 11px 23px;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: @white;
+  text-decoration: none;
+  cursor: pointer;
+  .ps-gradient-overlay(90; #ca3824 0%, #f26843 100%);
+  .ps-drop-shadow(#550800; 54%; 90; 2; 0; 2);
+
+  &:hover {
+    .ps-gradient-overlay(90; #f58669 0%, #ec6f5e 100%);
+    .ps-drop-shadow(#ac1000; 100%; 90; 1; 0; 2);
+  }
+
+  &:active {
+    .ps-gradient-overlay(90; #d74531 0%, #e1613e 100%);
+    .ps-inner-shadow(#942718; 100%; 90; 2; 0; 2);
+  }
+}

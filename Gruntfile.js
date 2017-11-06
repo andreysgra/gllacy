@@ -8,8 +8,8 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            'build/css/*.css',
-            'build/js/*.js',
+            'build/css/style.min.css',
+            'build/js/index.min.js',
             'build/*.html'
           ]
         },
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
           }
         ]
       },
-      dev: {
+      html: {
         files: [
           {
             expand: true,
@@ -67,7 +67,8 @@ module.exports = function(grunt) {
     csso: {
       compress: {
         options: {
-          comments: false
+          comments: false,
+          report: true
         },
         files: {
           'build/css/style.min.css': ['build/css/style.css']
@@ -115,6 +116,23 @@ module.exports = function(grunt) {
       }
     },
 
+    lintspaces: {
+      default: {
+        src: [
+          'src/*.html',
+          '*.json',
+          '*.js',
+          '*.md',
+          'src/**/*.js',
+          'src/img/**/*.svg',
+          'src/less/**/*.less'
+        ],
+        options: {
+          editorconfig: '.editorconfig'
+        }
+      }
+    },
+
     postcss: {
       style: {
         options: {
@@ -148,7 +166,7 @@ module.exports = function(grunt) {
     watch: {
       html: {
         files: ['src/*.html'],
-        tasks: ['copy:dev']
+        tasks: ['copy:html']
       },
       js: {
         files: ['src/js/*.js'],

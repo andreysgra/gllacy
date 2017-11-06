@@ -1,0 +1,59 @@
+.features {
+  padding: 10px 20px 15px;
+  border-radius: 15px;
+  color: @font-color-secondary;
+  background-color: #ebdec8;
+  background-image: url("../img/bg-features.jpg");
+  background-position: 51% 49%;
+}
+
+.features__title {
+  margin-top: 14px;
+  margin-bottom: 9px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .list-reset();
+}
+
+.features__item {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 56px;
+  padding-right: 5px;
+  width: 48.87%;
+  margin-top: 12px;
+  margin-bottom: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 49px;
+    height: 49px;
+    background-repeat: no-repeat;
+  }
+
+  &--icon-cow::before {
+    background-image: url("../img/icon-cow.svg");
+  }
+
+  &--icon-eco::before {
+    background-image: url("../img/icon-eco.svg");
+  }
+
+  &--icon-ice-cream::before {
+    background-image: url("../img/icon-ice-cream.svg");
+  }
+
+  &--icon-thermometer::before {
+    background-image: url("../img/icon-thermometer.svg");
+  }
+}

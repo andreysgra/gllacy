@@ -1,0 +1,56 @@
+.field-text {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  color: @font-color-input;
+}
+
+.field-text__name {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  cursor: text;
+
+  &--top {
+    top: 8px;
+    transform: none;
+  }
+}
+
+.field-text__input {
+  padding: 9px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font: inherit;
+  font-weight: 700;
+  color: @font-color-secondary;
+  border: 1px solid @border-color-input;
+
+  &:hover {
+    border-color: #9a9a9a;
+  }
+
+  &:focus {
+    outline-color: @outline-color-input;
+  }
+
+  &--textarea {
+    height: 155px;
+    resize: vertical;
+  }
+}
+
+.field-text__input:focus + .field-text__name {
+  top: -10px;
+  font-size: 12px;
+  line-height: 13px;
+  color: @font-color-label--focus;
+
+  &--top {
+    top: -16px;
+  }
+}

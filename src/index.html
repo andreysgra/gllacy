@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <div class="page-wrapper">
+  <div class="page-wrapper page-wrapper--background-primary">
     <div class="content-wrapper">
       <header class="page-header">
         <nav class="main-nav">
@@ -22,9 +22,9 @@
             <li class="main-menu__item">
               <a href="#" class="main-menu__link">Каталог</a>
 
-              <ul class="dropdown main-nav__dropdown">
+              <ul class="dropdown main-menu__dropdown">
                 <li class="dropdown__item">
-                  <a href="#" class="dropdown__link">Новинки</a>
+                  <a href="#" class="dropdown__link dropdown__link--important">Новинки</a>
                 </li>
                 <li class="dropdown__item">
                   <a href="catalog.html" class="dropdown__link">Сливочное</a>
@@ -50,69 +50,61 @@
         </nav>
 
         <div class="user">
-          <div class="user__search">
-            <a href="#" class="user__button">
+          <div class="user__wrapper">
+            <a href="#" class="user__button user__button--search">
               <span class="visually-hidden">Поиск</span>
+              <svg class="user__image user__image--center" width="18" height="18">
+                <use xlink:href="img/symbols.svg#icon-search"></use>
+              </svg>
             </a>
 
-            <form class="form-search" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="form-search user__form-search" action="https://echo.htmlacademy.ru/" method="get">
               <label class="field-text">
-                <span class="field-text__name">Что ищем?</span>
                 <input class="field-text__input" type="search" name="search" value="" required>
+                <span class="field-text__name">Что ищем?</span>
               </label>
             </form>
           </div>
 
-          <div class="user__login">
-            <a href="#" class="user__button">Вход</a>
+          <div class="user__wrapper">
+            <a href="#" class="user__button user__button--login">Вход
+              <svg class="user__image" width="21" height="19">
+                <use xlink:href="img/symbols.svg#icon-login"></use>
+              </svg>
+            </a>
 
-            <form class="form-login" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="field-text">
-                <span class="field-text__name">Электронная почта</span>
+            <form class="form-login user__form-login" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="field-text form-login__field-text">
                 <input class="field-text__input" type="email" name="login-email" required>
+                <span class="field-text__name">Электронная почта</span>
               </label>
 
-              <label class="field-text">
-                <span class="field-text__name">Пароль</span>
+              <label class="field-text form-login__field-text">
                 <input class="field-text__input" type="password" name="login-password" required>
+                <span class="field-text__name">Пароль</span>
               </label>
 
               <div class="form-login__bottom">
                 <button class="button" type="submit">Войти</button>
 
                 <div class="form-login__links">
-                  <a href="#" class="form-login__link">Забыли пароль?</a>
-                  <a href="#" class="form-login__link">Новая регистрация</a>
+                  <a href="#" class="link link--invert">Забыли пароль?</a>
+                  <a href="#" class="link link--invert">Новая регистрация</a>
                 </div>
               </div>
             </form>
           </div>
 
-          <div class="user__cart">
-            <a href="#" class="user__button">Пусто</a>
-
-            <div class="user__order">
-              <table class="order-table">
-                <tbody>
-                  <tr>
-                    <td class="order-table__cell"></td>
-                    <td class="order-table__cell"></td>
-                    <td class="order-table__cell"></td>
-                    <td class="order-table__cell"></td>
-                    <td class="order-table__cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="order-table__amount"></td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <a href="#" class="button button--disabled">Оформить заказ</a>
-            </div>
+          <div class="user__wrapper">
+            <a href="#" class="user__button user__button--cart">Пусто
+              <svg class="user__image" width="21" height="20">
+                <use xlink:href="img/symbols.svg#icon-cart-empty"></use>
+              </svg>
+            </a>
           </div>
         </div>
 
-        <div class="contact-number">
+        <div class="contact-number page-header__contact-number">
           <p class="contact-number__text">С 10 до 20, ежедневно</p>
           <a href="tel:88124502525" class="contact-number__link">8 812 450-25-25</a>
         </div>
@@ -124,70 +116,72 @@
         <div class="slider page-main__slider">
           <div class="slide slide--current slider__slide">
             <h2 class="slide__title">Крем-брюле и пломбир с малиновым джемом</h2>
-            <a href="#" class="slide__link button">Давайте оба!</a>
+            <a href="#" class="button slide__button">Давайте оба!</a>
           </div>
 
           <div class="slide slider__slide">
             <h2 class="slide__title">Шоколадный пломбир и лимонный сорбет</h2>
-            <a href="#" class="slide__link button">Давайте оба!</a>
+            <a href="#" class="button slide__button">Давайте оба!</a>
           </div>
 
           <div class="slide slider__slide">
             <h2 class="slide__title">Пломбир с помадкой и клубничный щербет</h2>
-            <a href="#" class="slide__link button">Давайте оба!</a>
+            <a href="#" class="button slide__button">Давайте оба!</a>
           </div>
 
-          <div class="slide-toggles slider__controls">
-            <button class="slide-toggles__button slide-toggles__button--active" type="button">
+          <div class="slider-toggles slider__controls">
+            <button class="slider-toggles__button slider-toggles__button--active" type="button">
               <span class="visually-hidden">1</span>
             </button>
-            <button class="slide-toggles__button" type="button">
+            <button class="slider-toggles__button" type="button">
               <span class="visually-hidden">2</span>
             </button>
-            <button class="slide-toggles__button" type="button">
+            <button class="slider-toggles__button" type="button">
               <span class="visually-hidden">3</span>
             </button>
           </div>
         </div>
 
-        <section class="promo">
+        <section class="promo page-main__promo">
           <h2 class="visually-hidden">Бонусы нашего магазина</h2>
 
-          <div class="promo__item">
+          <div class="promo__item promo__item--bg-raspberry">
             <b class="promo__title">Малинка даром!</b>
 
             <p class="promo__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
 
-            <a href="#" class="button promo__link">Хочу варенье!</a>
+            <a href="#" class="button promo__button">Хочу варенье!</a>
           </div>
 
-          <div class="promo__item">
+          <div class="promo__item promo__item--bg-chocolate">
             <b class="promo__title">Шоколадки даром!</b>
 
             <p class="promo__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
 
-            <a href="#" class="button promo__link">Хочу шоколадки!</a>
+            <a href="#" class="button promo__button">Хочу шоколадки!</a>
           </div>
         </section>
 
-        <section class="catalog">
+        <section class="catalog page-main__catalog">
           <h2 class="visually-hidden">Хиты продаж</h2>
 
           <article class="card-product card-product--hit">
             <h1 class="visually-hidden">Сливочное мороженое с апельсиновым джемом</h1>
 
-            <div class="card-product__image">
-              <img src="img/img-catalog-01.jpg" alt="Сливочное с апельсиновым джемом">
+            <div class="card-product__image-wrapper">
+              <img class="card-product__image" src="img/img-catalog-01.jpg" alt="Сливочное с апельсиновым джемом">
+
+              <p class="card-product__price">310
+                <svg class="card-product__image-ruble" width="31" height="36">
+                  <use xlink:href="img/symbols.svg#icon-ruble"></use>
+                </svg>
+                <span class="card-product__unit">/кг</span>
+              </p>
             </div>
 
-            <p class="card-product__price">310
-              <svg class="card-product__image-ruble" width="31" height="36">
-                <use xlink:href="img/symbols.svg#icon-ruble"></use>
-              </svg>
-              <span>/кг</span>
+            <p class="card-product__description">
+              <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             </p>
-
-            <p class="card-product__description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
 
             <div class="card-product__overlay">
               <a href="#" class="button card-product__button">Быстрый просмотр</a>
@@ -197,18 +191,20 @@
           <article class="card-product card-product--hit">
             <h1 class="visually-hidden">Сливочно-кофейное мороженое</h1>
 
-            <div class="card-product__image">
-              <img src="img/img-catalog-02.jpg" alt="Сливочно-кофейное">
+            <div class="card-product__image-wrapper">
+              <img class="card-product__image" src="img/img-catalog-02.jpg" alt="Сливочно-кофейное">
+
+              <p class="card-product__price">380
+                <svg class="card-product__image-ruble" width="31" height="36">
+                  <use xlink:href="img/symbols.svg#icon-ruble"></use>
+                </svg>
+                <span class="card-product__unit">/кг</span>
+              </p>
             </div>
 
-            <p class="card-product__price">380
-              <svg class="card-product__image-ruble" width="31" height="36">
-                <use xlink:href="img/symbols.svg#icon-ruble"></use>
-              </svg>
-              <span>/кг</span>
+            <p class="card-product__description">
+              <a href="#" class="link">Сливочно-кофейное с кусочками шоколада</a>
             </p>
-
-            <p class="card-product__description">Сливочно-кофейное с кусочками шоколада</p>
 
             <div class="card-product__overlay">
               <a href="#" class="button card-product__button">Быстрый просмотр</a>
@@ -218,18 +214,20 @@
           <article class="card-product card-product--hit">
             <h1 class="visually-hidden">Сливочно-клубничное мороженое</h1>
 
-            <div class="card-product__image">
-              <img src="img/img-catalog-03.jpg" alt="Сливочно-клубничное">
+            <div class="card-product__image-wrapper">
+              <img class="card-product__image" src="img/img-catalog-03.jpg" alt="Сливочно-клубничное">
+
+              <p class="card-product__price">355
+                <svg class="card-product__image-ruble" width="31" height="36">
+                  <use xlink:href="img/symbols.svg#icon-ruble"></use>
+                </svg>
+                <span class="card-product__unit">/кг</span>
+              </p>
             </div>
 
-            <p class="card-product__price">355
-              <svg class="card-product__image-ruble" width="31" height="36">
-                <use xlink:href="img/symbols.svg#icon-ruble"></use>
-              </svg>
-              <span>/кг</span>
+            <p class="card-product__description">
+              <a href="#" class="link">Сливочно-клубничное с присыпкой из белого шоколада</a>
             </p>
-
-            <p class="card-product__description">Сливочно-клубничное с присыпкой из белого шоколада</p>
 
             <div class="card-product__overlay">
               <a href="#" class="button card-product__button">Быстрый просмотр</a>
@@ -239,18 +237,20 @@
           <article class="card-product card-product--hit">
             <h1 class="visually-hidden">Сливочное крем-брюле</h1>
 
-            <div class="card-product__image">
-              <img src="img/img-catalog-04.jpg" alt="Сливочное крем-брюле">
+            <div class="card-product__image-wrapper">
+              <img class="card-product__image" src="img/img-catalog-04.jpg" alt="Сливочное крем-брюле">
+
+              <p class="card-product__price">415
+                <svg class="card-product__image-ruble" width="31" height="36">
+                  <use xlink:href="img/symbols.svg#icon-ruble"></use>
+                </svg>
+                <span class="card-product__unit">/кг</span>
+              </p>
             </div>
 
-            <p class="card-product__price">415
-              <svg class="card-product__image-ruble" width="31" height="36">
-                <use xlink:href="img/symbols.svg#icon-ruble"></use>
-              </svg>
-              <span>/кг</span>
+            <p class="card-product__description">
+              <a href="#" class="link">Сливочное крем-брюле с карамельной подливкой</a>
             </p>
-
-            <p class="card-product__description">Сливочное крем-брюле с карамельной подливкой</p>
 
             <div class="card-product__overlay">
               <a href="#" class="button card-product__button">Быстрый просмотр</a>
@@ -258,70 +258,58 @@
           </article>
         </section>
 
-        <section class="features">
+        <section class="features page-main__features">
           <h2 class="visually-hidden">Особенности нашего магазина</h2>
 
-          <p class="features__title">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
+          <p class="features__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
 
           <ul class="features__list">
-            <li class="features__item">
-              <svg class="features__image" width="49" height="49">
-                <use xlink:href="img/symbols.svg#icon-ice-cream"></use>
-              </svg>
+            <li class="features__item features__item--icon-ice-cream">
               Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
             </li>
-            <li class="features__item">
-              <svg class="features__image" width="49" height="49">
-                <use xlink:href="img/symbols.svg#icon-cow"></use>
-              </svg>
+            <li class="features__item features__item--icon-cow">
               Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
             </li>
-            <li class="features__item">
-              <svg class="features__image" width="49" height="49">
-                <use xlink:href="img/symbols.svg#icon-eco"></use>
-              </svg>
+            <li class="features__item features__item--icon-eco">
               Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
             </li>
-            <li class="features__item">
-              <svg class="features__image" width="49" height="49">
-                <use xlink:href="img/symbols.svg#icon-thermometer"></use>
-              </svg>
+            <li class="features__item features__item--icon-thermometer">
               Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
             </li>
           </ul>
         </section>
 
-        <div class="news">
-          <article class="blog-article">
+        <div class="news page-main__news">
+          <article class="blog-article news__item">
             <h2 class="blog-article__title">Новое в нашем блоге</h2>
 
             <a href="#" class="blog-article__link">10 способов сервировки фруктовых щербетов к столу</a>
           </article>
 
-          <article class="subscribe">
+          <article class="subscribe news__item">
             <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
-            <form class="form-subscribe" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="field-text">
-                <span class="field-text__name">Электронная почта</span>
+            <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="field-text subscribe__field-text">
                 <input class="field-text__input" type="email" name="subscribe-email" required>
+                <span class="field-text__name">Электронная почта</span>
               </label>
 
-              <button class="button" type="submit">Отправить</button>
+              <button class="button subscribe__button" type="submit">Отправить</button>
             </form>
           </article>
         </div>
       </main>
     </div>
 
-
     <section class="map">
       <h2 class="visually-hidden">Как к нам добраться</h2>
 
+      <img class="map__image" src="img/bg-map.png" width="1200" height="640" alt="Месторасположение главного офиса и магазина">
       <div class="map__interactive" id="map"></div>
 
       <div class="content-wrapper">
-        <div class="contacts">
+        <div class="contacts map__contacts">
           <p class="contacts__text">
             Адрес главного офиса<br>и офлайн магазина:
             <b class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
@@ -332,7 +320,7 @@
             <b class="contacts__phone">8 812 450-25-25</b>(с 10 до 20 ежедневно)
           </p>
 
-          <button class="button" type="button">Форма обратной связи</button>
+          <button class="button contacts__button" type="button">Форма обратной связи</button>
         </div>
       </div>
     </section>
@@ -379,16 +367,16 @@
         <div class="page-footer__info">
           <ul class="info-links">
             <li class="info-links__item">
-              <a href="#" class="info-links__link info-links__link--important">Для поставщиков</a>
+              <a href="#" class="link info-links__link info-links__link--important">Для поставщиков</a>
             </li>
             <li class="info-links__item">
-              <a href="#" class="info-links__link">Наши документы</a>
+              <a href="#" class="link info-links__link">Наши документы</a>
             </li>
             <li class="info-links__item">
-              <a href="#" class="info-links__link">О производстве</a>
+              <a href="#" class="link info-links__link">О производстве</a>
             </li>
             <li class="info-links__item">
-              <a href="#" class="info-links__link">Экологические стандарты</a>
+              <a href="#" class="link info-links__link">Экологические стандарты</a>
             </li>
           </ul>
         </div>
@@ -400,7 +388,7 @@
             </svg>
           </a>
 
-          <p class="copyright__text">Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2017</p>
+          <p class="copyright__text">Сделано в <a href="https://htmlacademy.ru/" class="link">HTML Academy</a> &copy; 2017</p>
         </div>
       </footer>
     </div>
@@ -411,26 +399,26 @@
       <fieldset class="form-feedback__fieldset">
         <legend class="form-feedback__legend">Мы обязательно вам ответим!</legend>
 
-        <label class="field-text">
-          <span class="field-text__name">Как вас зовут?</span>
+        <label class="field-text form-feedback__field form-feedback__field--fixed-size">
           <input class="field-text__input" type="text" name="feedback-name" required>
+          <span class="field-text__name">Как вас зовут?</span>
         </label>
 
-        <label class="field-text">
-          <span class="field-text__name">Ваша почта для ответа?</span>
+        <label class="field-text form-feedback__field form-feedback__field--fixed-size">
           <input class="field-text__input" type="email" name="feedback-email" required>
+          <span class="field-text__name">Ваша почта для ответа?</span>
         </label>
 
-        <label class="field-text">
-          <span class="field-text__name">Напишите что-нибудь...</span>
-          <textarea class="field-text__input" name="feedback-message" rows="10"></textarea>
+        <label class="field-text form-feedback__field">
+          <textarea class="field-text__input field-text__input--textarea" name="feedback-message"></textarea>
+          <span class="field-text__name field-text__name--top">Напишите что-нибудь...</span>
         </label>
       </fieldset>
 
-      <button class="button" type="submit">Отправить</button>
+      <button class="button form-feedback__button" type="submit">Отправить</button>
     </form>
 
-    <button class="button button--close" type="button">
+    <button class="button-close modal-feedback__button" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
   </div>

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "stylelint": "stylelint \"src/less/**/*.less\" --syntax less",
-    "test": "npm run stylelint",
+    "test": "grunt lintspaces && npm run stylelint",
     "build": "grunt build",
     "start": "npm run build && grunt serve",
     "deploy": "npm run build && grunt gh-pages"
@@ -29,6 +29,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-csso": "^2.2.0",
     "grunt-gh-pages": "^2.0.0",
+    "grunt-lintspaces": "^0.8.1",
     "grunt-postcss": "^0.9.0",
     "grunt-svgstore": "^1.0.0",
     "imagemin-jpegoptim": "^5.1.0",
