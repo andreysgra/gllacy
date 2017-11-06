@@ -40,6 +40,14 @@
     bottom: 6px;
     border-bottom: 1px solid fade(@white, 20%);
   }
+
+  &--current {
+    background-color: @bg-color-menu--current;
+
+    &::after {
+      border-bottom: none;
+    }
+  }
 }
 
 .main-menu__item--current .main-menu__link {

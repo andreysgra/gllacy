@@ -1,0 +1,229 @@
+.form-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-filters__fieldset {
+  margin: 0 15px 10px 0;
+  padding: 0;
+  border: none;
+}
+
+.form-filters__legend {
+  padding-left: 17px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form-filters__select-wrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-width: 10px 5.5px 0;
+    border-style: solid;
+    border-color: @white transparent transparent;
+  }
+
+  &:hover::after {
+    border-top-color: @black;
+  }
+}
+
+.form-filters__select {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 193px;
+  min-height: 36px;
+  border: none;
+  font: inherit;
+  color: @font-color-base;
+  font-weight: 500;
+  line-height: 18px;
+  appearance: none;
+  border-radius: 18px;
+  background-color: fade(@bg-color-dropdown, 20%);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: @font-color-secondary;
+  }
+}
+
+.form-filters__select::-ms-expand {
+  display: none;
+}
+
+.filter-range__title {
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
+.filter-range__label {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filter-range__input {
+  margin-left: 2px;
+  width: 25px;
+  color: @font-color-base;
+  border: none;
+  background-color: transparent;
+}
+
+.filter-range {
+  position: relative;
+  padding: 16px 21px;
+  border-radius: 18px;
+  background-color: fade(@bg-color-dropdown, 20%);
+}
+
+.filter-range__scale {
+  width: 176px;
+  height: 4px;
+  background-color: fade(@bg-color-dropdown, 50%);
+}
+
+.filter-range__bar {
+  width: 56%;
+  margin-left: 8%;
+  height: 4px;
+  background-color: @white;
+}
+
+.filter-range__handle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border: 9px solid @white;
+  border-radius: 50%;
+  background-color: #ababab;
+  cursor: pointer;
+
+  &--min {
+    left: 16%;
+  }
+
+  &--max {
+    left: 61%;
+  }
+}
+
+.form-filters__list {
+  display: flex;
+  padding: 9px 0 9px 16px;
+  font-weight: 500;
+  line-height: 18px;
+  border-radius: 18px;
+  background-color: fade(@bg-color-dropdown, 20%);
+  .list-reset(16px);
+}
+
+.form-filters__radio,
+.form-filters__checkbox {
+  display: none;
+}
+
+.form-filters__label-radio,
+.form-filters__label-checkbox {
+  position: relative;
+  padding-left: 32px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: left center;
+    opacity: 0.8;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.form-filters__label-radio {
+  padding-right: 17px;
+}
+
+.form-filters__label-checkbox {
+  padding-right: 21px;
+}
+
+.form-filters__label-radio::before {
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/icon-radio-off.svg");
+  background-size: 22px 22px;
+}
+
+.form-filters__radio:checked + .form-filters__label-radio::before {
+  background-image: url("../img/icon-radio-on.svg");
+}
+
+.form-filters__radio:disabled + .form-filters__label-radio::before {
+  opacity: 0.4;
+}
+
+.form-filters__label-checkbox::before {
+  width: 24px;
+  height: 20px;
+  background-image: url("../img/icon-checkbox-off.svg");
+  background-size: 20px 20px;
+}
+
+.form-filters__checkbox:checked + .form-filters__label-checkbox::before {
+  background-image: url("../img/icon-checkbox-on.svg");
+  background-size: 24px 20px;
+}
+
+.form-filters__checkbox:disabled + .form-filters__label-checkbox::before {
+  opacity: 0.4;
+}
+
+.form-filters__button {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  margin-top: 17px;
+  border: 2px solid @white;
+  border-radius: 18px;
+  padding: 7px 26px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: @white;
+  background-color: fade(@bg-color-dropdown, 20%);
+  cursor: pointer;
+
+  &:hover {
+    color: @font-color-secondary;
+    background-color: @white;
+  }
+
+  &:active {
+    padding: 9px 28px;
+    border: none;
+    color: @font-color-secondary;
+    background-color: #eaeaea;
+    .ps-inner-shadow(@shadow-color-menu; 100%; 90; 2; 0; 1);
+  }
+}

@@ -20,7 +20,7 @@
 
           <ul class="main-menu main-nav__list">
             <li class="main-menu__item">
-              <a href="#" class="main-menu__link">Каталог</a>
+              <a href="#" class="main-menu__link main-menu__link--current">Каталог</a>
 
               <ul class="dropdown main-menu__dropdown">
                 <li class="dropdown__item dropdown__item--important">
@@ -161,33 +161,35 @@
 
         <h1 class="page-main__title">Сливочное мороженое</h1>
 
-        <form class="form-filters" action="https://htmlacademy.ru/" method="get">
+        <form class="form-filters page-main__form-filters" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="form-filters__fieldset">
             <legend class="form-filters__legend">Сортировка:</legend>
 
-            <select class="form-filters__select" name="sort">
-              <option value="popularity">по популярности</option>
-              <option value="cheap">сначала недорогие</option>
-              <option value="expensive">сначала дорогие</option>
-              <option value="fat">по жирности</option>
-            </select>
+            <div class="form-filters__select-wrapper">
+              <select class="form-filters__select" name="sort">
+                <option value="popularity">по популярности</option>
+                <option value="cheap">сначала недорогие</option>
+                <option value="expensive">сначала дорогие</option>
+                <option value="fat">по жирности</option>
+              </select>
+            </div>
           </fieldset>
 
           <fieldset class="form-filters__fieldset">
-            <div class="filter-range">
-              <div class="filter-range__title">
-                <label class="filter-range__label">
-                  Цена:
-                  <input type="text" value="100">
-                  руб.
-                </label>
-                <label class="filter-range__label">
-                  -
-                  <input type="text" value="500">
-                  руб.
-                </label>
-              </div>
+            <div class="filter-range__title">
+              <label class="filter-range__label">
+                Цена:
+                <input class="filter-range__input" type="text" value="100">
+                руб.
+              </label>
+              <label class="filter-range__label">
+                -
+                <input class="filter-range__input" type="text" value="500">
+                руб.
+              </label>
+            </div>
 
+            <div class="filter-range">
               <div class="filter-range__scale">
                 <div class="filter-range__bar"></div>
               </div>
@@ -203,44 +205,46 @@
             <ul class="form-filters__list">
               <li class="form-filters__item">
                 <input class="form-filters__radio" type="radio" name="fat" id="fat-zero">
-                <label class="form-filters__label-radio" for="fat-zero">0%</label>
+                <label class="form-filters__label-radio" for="fat-zero" tabindex="0">0%</label>
               </li>
               <li class="form-filters__item">
-                <input class="form-filters__radio" type="radio" name="fat" id="fat-ten" checked="">
-                <label class="form-filters__label-radio" for="fat-ten">до 10%</label>
+                <input class="form-filters__radio" type="radio" name="fat" id="fat-ten" checked>
+                <label class="form-filters__label-radio" for="fat-ten" tabindex="0">до 10%</label>
               </li>
               <li class="form-filters__item">
                 <input class="form-filters__radio" type="radio" name="fat" id="fat-thirty">
-                <label class="form-filters__label-radio" for="fat-thirty">до 30%</label>
+                <label class="form-filters__label-radio" for="fat-thirty" tabindex="0">до 30%</label>
               </li>
               <li class="form-filters__item">
                 <input class="form-filters__radio" type="radio" name="fat" id="fat-over-thirty">
-                <label class="form-filters__label-radio" for="fat-over-thirty">выше 30%</label>
+                <label class="form-filters__label-radio" for="fat-over-thirty" tabindex="0">выше 30%</label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="form-filters__fieldset">
+            <legend class="form-filters__legend">Наполнители:</legend>
+
             <ul class="form-filters__list">
               <li class="form-filters__item">
                 <input class="form-filters__checkbox" type="checkbox" name="chocolate" id="filler-chocolate" checked="">
-                <label class="form-filters__label-checkbox" for="filler-chocolate">шоколадные</label>
+                <label class="form-filters__label-checkbox" for="filler-chocolate" tabindex="0">шоколадные</label>
               </li>
               <li class="form-filters__item">
                 <input class="form-filters__checkbox" type="checkbox" name="sugar" id="filler-sugar" checked="">
-                <label class="form-filters__label-checkbox" for="filler-sugar">сахарные присыпки</label>
+                <label class="form-filters__label-checkbox" for="filler-sugar" tabindex="0">сахарные присыпки</label>
               </li>
               <li class="form-filters__item">
                 <input class="form-filters__checkbox" type="checkbox" name="fruit" id="filler-fruit">
-                <label class="form-filters__label-checkbox" for="filler-fruit">фрукты</label>
+                <label class="form-filters__label-checkbox" for="filler-fruit" tabindex="0">фрукты</label>
               </li>
               <li class="form-filters__item">
                 <input class="form-filters__checkbox" type="checkbox" name="syrup" id="filler-syrup">
-                <label class="form-filters__label-checkbox" for="filler-syrup">сиропы</label>
+                <label class="form-filters__label-checkbox" for="filler-syrup" tabindex="0">сиропы</label>
               </li>
               <li class="form-filters__item">
                 <input class="form-filters__checkbox" type="checkbox" name="jam" id="filler-jam">
-                <label class="form-filters__label-checkbox" for="filler-jam">джемы</label>
+                <label class="form-filters__label-checkbox" for="filler-jam" tabindex="0">джемы</label>
               </li>
             </ul>
           </fieldset>
@@ -248,10 +252,10 @@
           <button class="form-filters__button" type="submit">Применить</button>
         </form>
 
-        <section class="catalog">
+        <section class="catalog page-main__catalog">
           <h2 class="visually-hidden">Каталог продукции</h2>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочное мороженое с апельсиновым джемом</h1>
 
             <div class="card-product__image-wrapper">
@@ -274,7 +278,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочно-кофейное мороженое</h1>
 
             <div class="card-product__image-wrapper">
@@ -297,7 +301,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочно-клубничное мороженое</h1>
 
             <div class="card-product__image-wrapper">
@@ -320,7 +324,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочное крем-брюле</h1>
 
             <div class="card-product__image-wrapper">
@@ -343,7 +347,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочное мороженое с брусничным джемом</h1>
 
             <div class="card-product__image-wrapper">
@@ -366,7 +370,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочно-черничное мороженое</h1>
 
             <div class="card-product__image-wrapper">
@@ -389,7 +393,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочно-лимонное мороженое</h1>
 
             <div class="card-product__image-wrapper">
@@ -412,7 +416,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочное мороженое с шоколадной стружкой</h1>
 
             <div class="card-product__image-wrapper">
@@ -435,7 +439,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочно-ванильное с кусочками шоколада</h1>
 
             <div class="card-product__image-wrapper">
@@ -458,7 +462,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочноe с ментоловым сиропом</h1>
 
             <div class="card-product__image-wrapper">
@@ -481,7 +485,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочное с кусочками черного шоколада</h1>
 
             <div class="card-product__image-wrapper">
@@ -504,7 +508,7 @@
             </div>
           </article>
 
-          <article class="card-product">
+          <article class="card-product catalog__card-product">
             <h1 class="visually-hidden">Сливочное с мятным сиропом</h1>
 
             <div class="card-product__image-wrapper">
@@ -530,8 +534,10 @@
 
         <div class="page-main__pagination">
           <ul class="pagination">
-            <li class="pagination__item pagination__item--prev">
-              <a class="pagination__link">Назад</a>
+            <li class="pagination__item">
+              <a class="pagination__direction pagination__direction--prev pagination__direction--disabled">
+                <span class="visually-hidden">Назад</span>
+              </a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link pagination__link--current">1</a>
@@ -548,8 +554,10 @@
             <li class="pagination__item">
               <a href="#" class="pagination__link">5</a>
             </li>
-            <li class="pagination__item pagination__item--next">
-              <a href="#">Вперёд</a>
+            <li class="pagination__item">
+              <a href="#" class="pagination__direction pagination__direction--next">
+                <span class="visually-hidden">Вперёд</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -596,16 +604,16 @@
         <div class="page-footer__info">
           <ul class="info-links">
             <li class="info-links__item">
-              <a href="#" class="info-links__link info-links__link--important">Для поставщиков</a>
+              <a href="#" class="link info-links__link info-links__link--important">Для поставщиков</a>
             </li>
             <li class="info-links__item">
-              <a href="#" class="info-links__link">Наши документы</a>
+              <a href="#" class="link info-links__link">Наши документы</a>
             </li>
             <li class="info-links__item">
-              <a href="#" class="info-links__link">О производстве</a>
+              <a href="#" class="link info-links__link">О производстве</a>
             </li>
             <li class="info-links__item">
-              <a href="#" class="info-links__link">Экологические стандарты</a>
+              <a href="#" class="link info-links__link">Экологические стандарты</a>
             </li>
           </ul>
         </div>
@@ -617,7 +625,7 @@
             </svg>
           </a>
 
-          <p class="copyright__text">Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2017</p>
+          <p class="copyright__text">Сделано в <a href="https://htmlacademy.ru/" class="link">HTML Academy</a> &copy; 2017</p>
         </div>
       </footer>
     </div>
