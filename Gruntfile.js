@@ -78,7 +78,8 @@ module.exports = function(grunt) {
 
     'gh-pages': {
       options: {
-        base: 'build'
+        base: 'build',
+        message: 'Auto-generated commit'
       },
       src: ['**/*']
     },
@@ -88,9 +89,9 @@ module.exports = function(grunt) {
         options: {
           use: [
             require('imagemin-optipng')(),
-            require('imagemin-svgo')({plugins: [
-              {removeTitle: true}
-            ]}),
+            require('imagemin-svgo')({
+              plugins: [{removeTitle: true}]
+            }),
             require('imagemin-jpegoptim')({
               max: 80,
               progressive: true
