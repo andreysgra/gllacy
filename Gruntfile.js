@@ -31,8 +31,7 @@ module.exports = function(grunt) {
 
     concat: {
       build: {
-        src: ['node_modules/picturefill/dist/picturefill.js',
-              'node_modules/svg4everybody/dist/svg4everybody.js',
+        src: ['node_modules/svg4everybody/dist/svg4everybody.js',
               'src/js/index.js'],
         dest: 'build/js/index.js'
       }
