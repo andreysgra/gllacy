@@ -1,4 +1,5 @@
-# Проект «Глейси» от [HTML Academy](https://htmlacademy.ru/) [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Проект «Глейси» от [HTML Academy](https://htmlacademy.ru/)
+[![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Вёрстка: [Андрей Грачев](https://github.com/andreysgra/)
 * [Демо проекта](https://andreysgra.github.io/gllacy/)
