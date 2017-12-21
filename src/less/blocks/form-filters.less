@@ -51,14 +51,14 @@
   background-color: fade(@bg-color-dropdown, 20%);
   cursor: pointer;
 
+  &::-ms-expand {
+    display: none;
+  }
+
   &:hover,
   &:focus {
     color: @font-color-secondary;
   }
-}
-
-.form-filters__select::-ms-expand {
-  display: none;
 }
 
 .filter-range__title {
