@@ -4,6 +4,25 @@
   list-style: none;
 }
 
+// Photoshop Gradient Overlay
+.ps-gradient-overlay(@angle-ps: 0; @color-stop) {
+  .getAngle() when (@angle-ps > -180) and (@angle-ps <= 90) {
+    @angle: unit(90 - @angle-ps, deg);
+  }
+
+  .getAngle() when (@angle-ps > 90) and (@angle-ps <= 180) {
+    @angle: unit(360 + (90 - @angle-ps), deg);
+  }
+
+  .getAngle() when (default()) {
+    @angle: unit(0, deg);
+  }
+
+  .getAngle();
+
+  background-image: ~"linear-gradient(@{angle}, @{color-stop})";
+}
+
 // Photoshop Drop Shadow
 .ps-drop-shadow(@color: #000000; @opacity: 0; @angel: 0; @distance: 0; @spread: 0; @size: 0; @inner: false) {
   @radian: (180 - @angel) * (pi() / 180);                  // перевод градусов в радианы
@@ -39,23 +58,4 @@
   @blur-radius: unit(@size - @size * @spread / @size, px); // размытие
 
   text-shadow: @offset-x @offset-y @blur-radius fade(@color, @opacity);
-}
-
-// Photoshop Gradient Overlay
-.ps-gradient-overlay(@angle-ps; @color-stop) {
-  .getAngle() when (@angle-ps > -180) and (@angle-ps <= 90) {
-    @angle: unit(90 - @angle-ps, deg);
-  }
-
-  .getAngle() when (@angle-ps > 90) and (@angle-ps <= 180) {
-    @angle: unit(360 + (90 - @angle-ps), deg);
-  }
-
-  .getAngle() when (default()) {
-    @angle: unit(0, deg);
-  }
-
-  .getAngle();
-
-  background-image: ~"linear-gradient(@{angle}, @{color-stop})";
 }

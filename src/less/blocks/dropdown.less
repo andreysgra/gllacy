@@ -45,6 +45,11 @@
   }
 }
 
+.dropdown__item--current .dropdown__link {
+  color: @font-color-base;
+  background-color: @bg-color-menu--current;
+}
+
 .dropdown__item:first-of-type .dropdown__link {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -53,9 +58,4 @@
 .dropdown__item:last-of-type .dropdown__link {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-
-.dropdown__item--current .dropdown__link {
-  color: @font-color-base;
-  background-color: @bg-color-menu--current;
 }
