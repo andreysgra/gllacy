@@ -104,7 +104,7 @@
     }
     return svg4everybody;
 });
-'use strict'
+'use strict';
 
 svg4everybody();
 
