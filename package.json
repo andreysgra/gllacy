@@ -1,8 +1,8 @@
 {
   "name": "gllacy",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Проект «Глейси» от HTML Academy",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "stylelint": "stylelint src/less/**/*.less --syntax less",
     "test": "grunt lintspaces && npm run stylelint",
