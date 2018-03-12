@@ -17,7 +17,7 @@
   "author": "Andrey Grachev <andreysgra@gmail.com> (https://github.com/andreysgra)",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^8.0.0",
+    "autoprefixer": "^8.1.0",
     "gh-pages": "^1.1.0",
     "grunt": "^1.0.2",
     "grunt-browser-sync": "^2.2.0",
@@ -34,8 +34,8 @@
     "grunt-svgstore": "^1.0.0",
     "imagemin-jpegoptim": "^5.2.0",
     "load-grunt-tasks": "^3.5.2",
-    "stylelint": "^9.0.0",
-    "stylelint-config-standard": "^18.1.0"
+    "stylelint": "^9.1.1",
+    "stylelint-config-standard": "^18.2.0"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
